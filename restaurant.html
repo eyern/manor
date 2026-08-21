@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Our Restaurant.</title>
+	<title>Our Restaurant & Bar </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -64,7 +64,7 @@
 					<div class="text">
 						<p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span>
 							<span>Dine the Manor Way</span></p>
-						<h1 class="mb-4 bread">Restaurant</h1>
+						<h1 class="mb-4 bread">Restaurant & Bar Menu</h1>
 					</div>
 				</div>
 			</div>
@@ -75,7 +75,7 @@
 		<div class="container-fluid px-md-4">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
-					<span class="subheading">Restaurant Offers</span>
+					<span class="subheading">Checkout Ziwani Manor Restaurant Offers</span>
 					<h2>Dine in the Manor Way</h2>
 				</div>
 			</div>
@@ -143,6 +143,58 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="gallery-section">
+		<div class="row justify-content-center mb-5 pb-3">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+				<span class="subheading">Fresh | Wholesome | Intentional</span>
+				<h2>Our Restaurant Menu</h2>
+			</div>
+		</div>
+
+		<div class="gallery-grid">
+			<!-- Item 1 -->
+			<div class="gallery-item-menu">
+				<img src="images/manor-menu.png" alt="Ziwani Manor Restaurant Menu">
+			</div>
+			<!-- Item 2 -->
+			<div class="gallery-item-menu">
+				<img src="images/manor-menu-2.png" alt="Ziwani Manor Restaurant Menu">
+			</div>
+		</div>
+		<br>
+		<div class="col-md-12 text-center ftco-animate">
+			<p><a href="images/Ziwani_Manor_Curated_Menu 2026.pdf" class="btn btn-primary rounded">Download Restaurant Menu</a></p>
+		</div>
+
+	</section>
+
+
+	<section class="gallery-section">
+		<div class="row justify-content-center mb-5 pb-3">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+				<span class="subheading">Crafted Moments | Timeless Escape.</span>
+				<h2>Our Bar Menu</h2>
+			</div>
+		</div>
+
+		<div class="gallery-grid">
+			<!-- Item 1 -->
+			<div class="gallery-item-menu">
+				<img src="images/bar-menu-1.png" alt="Ziwani Manor Bar Menu">
+			</div>
+			<!-- Item 2 -->
+			<div class="gallery-item-menu">
+				<img src="images/bar-menu-2.png" alt="Ziwani Manor Bar Menu">
+			</div>
+		</div>
+		<br>
+		<div class="col-md-12 text-center ftco-animate">
+			<p><a href="images/Ziwani_Manor_Bar_List_2026.pdf" class="btn btn-primary rounded">Download Bar Menu</a></p>
+		</div>
+	</section>
+	  
+	  
 
 	<footer class="ftco-footer ftco-section img" style="background-image: url(images/home.jpg);">
 		<div class="overlay"></div>
@@ -244,6 +296,31 @@
 			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
 				stroke="#337239" />
 		</svg></div>
+
+	<script>
+		const filterButtons = document.querySelectorAll('.filter-btn');
+		const menuCards = document.querySelectorAll('.menu-card');
+
+		filterButtons.forEach(button => {
+		button.addEventListener('click', () => {
+			// Remove active class from all buttons
+			filterButtons.forEach(btn => btn.classList.remove('active'));
+			button.classList.add('active');
+
+			const filterValue = button.getAttribute('data-filter');
+
+			menuCards.forEach(card => {
+			const category = card.getAttribute('data-category');
+			if (filterValue === 'all' || category === filterValue) {
+				card.classList.remove('hide');
+			} else {
+				card.classList.add('hide');
+			}
+			});
+		});
+		});
+
+	</script>	
 
 
 	<script src="js/jquery.min.js"></script>
